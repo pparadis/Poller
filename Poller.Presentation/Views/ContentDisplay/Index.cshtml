@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Title
+{
+    Board
+}
+
+<script src="~/signalr/hubs"></script>
+
+<script type="text/javascript" src="../../Scripts/app.js"></script>
+
+<h2>IT-Services</h2>
+<div class="row">
+    <div class="col-xs-4 col-md-4">
+        <h3>Daily Stuff</h3>
+    </div>
+
+    <div class="col-xs-8 col-md-8">
+        <h3>Tech Radar</h3>
+    </div>
+
+    <div id="left-bar" class="col-xs-4 col-md-4"></div>
+    <div id="right-bar" class="col-xs-8 col-md-8"></div>
+</div>
+
+
+<script id="ContentTemplate" type="text/x-jsrender">
+    <div class="post">
+        <strong>{{:User}}</strong> ({{:FormattedCreatedOn}})
+        <p>{{:Content}}</p>
+    </div>
+</script>
+
+<script id="ImageTemplate" type="text/x-jsrender">
+    <div class="post">
+        <strong>{{:User}}</strong> ({{:FormattedCreatedOn}})
+        <img class="img-responsive" src="{{:Content}}" />
+    </div>
+</script>
+
+<script id="UrlTemplate" type="text/x-jsrender">
+    <div class="post">
+        <strong>{{:User}}</strong> ({{:FormattedCreatedOn}})
+        <a href="{{:Content}}">{{:Content}}</a>
+    </div>
+</script>

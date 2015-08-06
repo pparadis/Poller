@@ -1,0 +1,6 @@
+﻿- Revoir le padding sur les rows de contenu
+- Ajuster la taille du texte pour le contenu (mode écran)
+- (DONE) Prévoir un mot de texte+contenu
+- Upload d'images
+- Avoir un indicateur des personnes en ligne
+- Embed YouTube
